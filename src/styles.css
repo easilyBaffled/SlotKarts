@@ -1,0 +1,186 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #dbdbdb;
+    overflow: hidden;
+    position: relative;
+}
+.App {
+    font-family: sans-serif;
+    text-align: center;
+    overflow: hidden;
+
+    outline: none;
+}
+
+svg {
+    height: 90vh;
+    width: 100vw;
+}
+
+path {
+    fill: none;
+    stroke-width: 3px;
+}
+
+.boostpad {
+    fill: #fbd000;
+    stroke: #dbdbdb;
+}
+
+circle {
+    fill: steelblue;
+    stroke: #fff;
+    stroke-width: 3px;
+}
+
+.dot {
+    stroke-dasharray: 90;
+    /* stroke-dashoffset: 90; */
+}
+
+.trail {
+    stroke-width: 0px;
+}
+
+circle.dot.luigi {
+    fill: #139334;
+}
+
+circle.dot.mario {
+    fill: #fe130f;
+    stroke: white;
+}
+
+.positions {
+    display: flex;
+    background: black;
+    color: white;
+    padding: 10px;
+    height: 7vh;
+    box-sizing: border-box;
+    margin: 0px;
+    align-items: center;
+    position: relative;
+}
+
+.attribution {
+    position: absolute;
+    right: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 5px;
+    font-weight: 300;
+}
+
+.attribution a {
+    color: #049cd8;
+}
+
+.position-dot {
+    background: red;
+    border: 3px white;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.player {
+    background: steelblue;
+}
+
+.mario {
+    background: #fe130f;
+}
+
+.luigi {
+    background: #139334;
+    border: 3px #16b65c;
+}
+
+.hazzard {
+    fill: black;
+    filter: drop-shadow(16px 16px 20px red);
+    animation: pulseCheat 1.5s infinite;
+    stroke-width: 7px;
+}
+
+.homing {
+    fill: #086421;
+}
+
+.fade-out {
+    margin-left: 20px;
+    opacity: 1;
+}
+
+@keyframes fade-out {
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes pulseCheat {
+    0% {
+        stroke: rgba(255, 0, 0, 0.5);
+    }
+    100% {
+        stroke: rgba(255, 0, 0, 0);
+    }
+}
+
+@keyframes splat {
+    0% {
+        stroke: rgba(255, 0, 0, 0.5);
+    }
+    100% {
+        stroke: rgba(255, 0, 0, 0);
+    }
+}
+
+.shake {
+    animation: shake 1.5s;
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-60px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(60px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-40px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(40px, 0, 0);
+    }
+}
+
+.tutorialText {
+    font: bold 20px sans-serif;
+    text-decoration: underline;
+}
+
+.path {
+    stroke-dasharray: 90;
+    stroke-dashoffset: 90;
+    animation: dash 5s linear forwards;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
